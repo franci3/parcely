@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-class GlobalConstants {
-  static const String appName = 'Parcely';
-
+class ParcelyPulseTheme {
   // Colors
   static const Color caribbeanCurrent = Color.fromRGBO(56, 104, 106, 1);
   static const Color blueBase = Color.fromRGBO(24, 119, 149, 1);
@@ -12,7 +10,7 @@ class GlobalConstants {
   static const Color redRage = Color.fromRGBO(255, 0, 0, 1);
 
   // Theme
-  static ThemeData parcelyTheme = ThemeData(
+  static ThemeData theme = ThemeData(
       useMaterial3: true,
       colorScheme: const ColorScheme(
         primary: caribbeanCurrent,
