@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:parcely/common/ui/widgets/rail_navigation_bar.dart';
+import 'package:parcely/common/navigation/ui/navigation_rail.dart';
+import 'package:parcely/common/ui/widgets/logo.dart';
 
 class CustomScaffold extends StatelessWidget {
   const CustomScaffold({super.key, required this.child});
@@ -11,7 +12,9 @@ class CustomScaffold extends StatelessWidget {
     return Scaffold(
       body: Row(
         children: <Widget>[
-          RailNavigationBar(),
+          const MainNavigationRail(
+            leading: Logo(),
+          ),
           Expanded(child: child),
         ],
       ),

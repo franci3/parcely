@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:parcely/common/constants/parcely_constants.dart';
-import 'package:parcely/features/home/home_page.dart';
+import 'package:parcely/common/navigation/routes/routes.dart';
+import 'package:parcely/features/home/home.dart';
 import 'package:parcely_pulse/parcely_pulse.dart';
 
 void main() {
@@ -12,11 +14,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    final GoRouter router = Routes.router;
+    return MaterialApp.router(
       title: ParcelyConstants.appName,
       debugShowCheckedModeBanner: false,
       theme: ParcelyPulseTheme.theme,
-      home: const HomePage(),
+      routerConfig: router,
+      builder: (_, __) {
+        return const HomePage();
+      },
     );
   }
 }

@@ -10,7 +10,7 @@ class Logo extends StatelessWidget {
   Widget build(BuildContext context) {
     return SvgPicture.asset(
       ParcelyConstants.logo,
-      height: ParcelyPulseSizes.s100,
+      height: ParcelyPulseSizes.s60,
     );
   }
 }
